@@ -1,0 +1,38 @@
+.makeGrey{
+	background-color: grey;
+}
+
+.Result{
+	text-align:justify;
+	text-justify:inter-word;
+	padding: 5%;
+
+}
+.clickableModule
+{
+	cursor: pointer; cursor: hand;
+	border: 1px solid;
+	background-color: #A4A4A4;
+	padding: 2%;
+
+
+}
+
+#CV
+{
+	background-color: white;
+	padding: 5%;
+	text-align:justify;
+	text-justify:inter-word;
+	margin:2%;
+	
+}
+
+.StartHidden
+{
+	display: none;
+}
+
+textarea {
+    width: 100%;
+}

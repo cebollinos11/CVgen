@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="makeclickable.js"></script>
+
+<link rel="stylesheet" type="text/css" href="styles.css">
+
+</head>
+<body class="makeGrey">
+
+<script>
+
+function GeneratePage()
+{
+  var content = $("#CV").html();
+  $("body").removeClass("makeGrey").empty().append("<div class='Result'>"+content+"<div>");
+
+}
+function StartCV()
+{
+  
+  //clean Divs in case of clicking START several times
+  $("#ModulePicker")
+  .empty()
+  .show();
+  $("#CV")
+  .empty()
+  .show();
+  $("#GenerateButton").show();
+  ReadJson();
+
+};
+function AddModule(){
+};
+
+function SendModule(param1)
+{
+  
+  $("#ModulesHere").append($(this)[0].text,"<br><br>"); //write text
+  $(param1[0]).hide();
+
+};
+function ReadJson(){
+    
+ 	var items = [];
+    $.getJSON( "jsonfile.txt", function( data ) {
+
+
+      //add intro
+      var dear = data.intro.Dear +" "+$("#form_namerecruiter").val()+",<br><br>";
+      var intro1 = data.intro.Intro1+" "+$("#form_jobname").val();
+      $("#CV").append(dear,intro1,data.intro.Intro2+"<br><br>");
+      $("#CV").append("<div id='ModulesHere'></div>");
+
+    	
+      //add the clickable modules
+      $.each( data.modules, function( key, val ) {
+          
+
+          var jq1= $('<div/>',{
+            text: val.title          
+        });
+
+          var jq2 = $("<div/>",{
+            id: val.title,
+            text: val.text,
+            class: 'clickableModule',
+            click: SendModule.bind(this,jq1)
+            
+          });
+
+          jq1.append(jq2);
+          items.push(jq1);
+                    
+      }); 
+
+      //add ending  
+      $("#CV").append(data.intro.Ending);
+
+     
+		$("#ModulePicker").append(items); 
+			
+    });
+
+    
+    
+};
+  
+$( document ).ready(function(){
+	
+	//ReadJson();
+	
+}
+
+	);
+
+
+
+</script>
+<h1>Cover Letter generator</h1>
+<div id="Starter">
+  Recruiter name: <input id="form_namerecruiter" type="text"  value="----"><br>
+  Job position: <input id="form_jobname" type="text" value="*****"><br>
+  <button type="button" onclick="StartCV()">Start!</button>
+</div>
+<div id="ModulePicker" class="StartHidden"></div>
+<div id="CV" class = "StartHidden"><br></div>
+<button type="button" id="GenerateButton" onclick="GeneratePage()" class="StartHidden">
+Generate it!</button>
+<script>
+</script>
+</body>
+</html>
