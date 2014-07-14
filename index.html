@@ -45,11 +45,13 @@ function ReadJson(){
     
  	var items = [];
     $.getJSON( "jsonfile.txt", function( data ) {
-
+      
+      //add contact info
+      $("#CV").append("<div class='AlignLeft'>"+data.intro.ContactInfo+"</div><br>");
 
       //add intro
       var dear = data.intro.Dear +" "+$("#form_namerecruiter").val()+",<br><br>";
-      var intro1 = data.intro.Intro1+" "+$("#form_jobname").val();
+      var intro1 = data.intro.Intro1+" "+$("#form_jobname").val()+". ";
       $("#CV").append(dear,intro1,data.intro.Intro2+"<br><br>");
       $("#CV").append("<div id='ModulesHere'></div>");
 
@@ -100,8 +102,8 @@ $( document ).ready(function(){
 </script>
 <h1>Cover Letter generator</h1>
 <div id="Starter">
-  Recruiter name: <input id="form_namerecruiter" type="text"  value="----"><br>
-  Job position: <input id="form_jobname" type="text" value="*****"><br>
+  Recruiter name: <input id="form_namerecruiter" type="text"  value="RECRUITER NAME"><br>
+  Job position: <input id="form_jobname" type="text" value="JOB TITLE"><br>
   <button type="button" onclick="StartCV()">Start!</button>
 </div>
 <div id="ModulePicker" class="StartHidden"></div>

@@ -2,6 +2,10 @@
 	background-color: grey;
 }
 
+.AlignLeft{
+	text-align:right;
+}
+
 .Result{
 	text-align:justify;
 	text-justify:inter-word;
