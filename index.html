@@ -2,9 +2,9 @@
 <html>
 <head>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="makeclickable.js"></script>
+<script src="assets/makeclickable.js"></script>
 
-<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="assets/styles.css">
 
 </head>
 <body class="makeGrey">
@@ -44,7 +44,7 @@ function SendModule(param1)
 function ReadJson(){
     
  	var items = [];
-    $.getJSON( "jsonfile.txt", function( data ) {
+    $.getJSON( "content/jsonfile.txt", function( data ) {
       
       //add contact info
       $("#CV").append("<div class='AlignLeft'>"+data.intro.ContactInfo+"</div><br>");
@@ -105,6 +105,7 @@ $( document ).ready(function(){
   Recruiter name: <input id="form_namerecruiter" type="text"  value="RECRUITER NAME"><br>
   Job position: <input id="form_jobname" type="text" value="JOB TITLE"><br>
   <button type="button" onclick="StartCV()">Start!</button>
+  <a href="fileeditor.php">Module Editor</a>
 </div>
 <div id="ModulePicker" class="StartHidden"></div>
 <div id="CV" class = "StartHidden"><br></div>
