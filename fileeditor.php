@@ -1,7 +1,7 @@
 <?php
 
 // configuration
-$url = '/cv';
+$url = '/';
 $file = 'content/jsonfile.txt';
 
 
