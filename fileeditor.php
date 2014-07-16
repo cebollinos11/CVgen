@@ -1,7 +1,7 @@
 <?php
 
 // configuration
-$url = '/';
+$url = dirname($_SERVER['PHP_SELF']);
 $file = 'content/jsonfile.txt';
 
 
@@ -45,13 +45,17 @@ $text = file_get_contents($file);
 ?>
 
 <html>
+  <head>
+  <link rel="stylesheet" type="text/css" href="assets/styles.css">
+
+</head>
 <body>
 <!-- HTML form -->
 
 <form action="" method="post">
 <textarea name="text" style="width: 90%; height: 90%;"><?php echo htmlspecialchars($text) ?></textarea><br><br>
 <a href="http://jsonlint.com/" target="_blank">Json Validator</a>
-<input type="submit" />
+<input type="submit" class="buttons" />
 
 </form>
 </body>

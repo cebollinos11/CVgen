@@ -1,10 +1,12 @@
-.makeGrey{
-	background-color: grey;
+body, .makeGrey{
+	background-color: #E6E6E6;
 }
 
 .AlignLeft{
 	text-align:right;
 }
+
+
 
 .Result{
 	text-align:justify;
@@ -16,14 +18,17 @@
 {
 	cursor: pointer; cursor: hand;
 	border: 1px solid;
-	background-color: #A4A4A4;
+	background-color: #BDBDBD;
 	padding: 2%;
-
-
+}
+.clickableModule:hover
+{ 
+background-color:white;
 }
 
 #CV
 {
+  /*background-image:url('  http://inspirationhut3.inspirationhut.netdna-cdn.com/wp-content/uploads/2012/11/Grungy-Paper-Texture-3.jpg');'*/
 	background-color: white;
 	padding: 5%;
 	text-align:justify;
@@ -39,4 +44,28 @@
 
 textarea {
     width: 100%;
+}
+
+button, a, .button {
+  font: bold 20px Arial;
+  text-decoration: none;
+  background-color: black;
+  color: white;
+  padding: 2px 6px 2px 6px;
+  border-top: 1px solid #CCCCCC;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #CCCCCC;
+  cursor: pointer;
+}
+
+h1{
+  font-family:  "Courier New", Courier, monospace;
+	font-weight: normal;
+        font-size: 1.75em;
+	
+	line-height: 1.1em;
+	margin:0px;
+	text-align: left;
+	
 }

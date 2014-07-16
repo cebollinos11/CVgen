@@ -1,0 +1,20 @@
+{
+    "modules": [
+    {"title":"Aalborg","text" : "I studied for one year at Aalborg University as an exchange student where I enrolled in the MSc Mechatronic Control Engineering. There, I studied more advanced control subjects like Hydraulic Systems or Non-Linear Control."},
+
+    {"title":"LastProject","text" : "For my final project I worked as part of a multicultural team and we had to control a 4 wheel drive RC car. For this project, we had a limited budget, and we had to decide on what to spend our resources. The parts that were not bought had to be, of course, made in the lab. We also had to program the control loop in a PIC. This project was really important for me, due to the fact that I realized that managing the budget and deadlines are as important as my engineering skills."},
+    {"title":"CurrentJob","text" : "My current job, Technical supporter at One.com, is a customer-oriented position where I talk to customers on a daily basis. I fix their web-related problems, show  them our new features and teach them how to use them. I also enrolled in a number of side projects where I design, develop and test new applications for both clients and supporters."},
+    {"title":"ExperienceStudies","text" : "During my studies, I have gained a lot of valuable experience that can be very useful for this position With regards to Automation I have experience in the following fields:<ul><li>Programming the Siemens PLC S7 200.<li>Running a Flexible Manufacturing System FMS200 <li>IEC 61131-3 certificate from Edunet (Germany).<li>SCADA</li></ul>"},
+    {"title":"WebSkills","text" : "Thanks to my current job I have developed my web programming skills. Every day I work with javascript and php problems that our customers ask. I also have knowledge about jquery, html, css, ajax and Json. Regarding CMS I give support to Wordpress, Joomla, Drupal and Prestashop installations."},
+    {"title":"Testing","text":"I also am a part of the QA department. My role here is test our new products and report directly to the QA manager. I have tested our Web Editor, our web mail client, and Bix (an standalone product similar to DropBox) among others. One.com has more than a million customers so I am really thorough when working on testing and have favorable feedback from my managers...!"}
+    ],
+
+    "intro":
+    {"Dear":"Dear",
+    "Intro1":"My name is Pablo Sarmiento and I am 26 years old. I am responding to your advertisement for a position of ",
+    "Ending":"I really hope that you find this application of interest, and I look forward to hearing from you at your earliest convenience.<br><br>Yours faithfully,<br>Pablo Sarmiento Merino",
+    "Intro2":" I graduated from University of Oviedo with a Master’s Degree in Electronics and Automation. Since last year I am employed as a technical supporter at One.com.",
+    "ContactInfo":"Pablo Sarmiento Merino<br>+45 42440864<br>sarmientomerino@gmail.com<br>"}
+
+    
+}
