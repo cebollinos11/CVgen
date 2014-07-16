@@ -91,8 +91,8 @@ function ReadJson(){
   
 $( document ).ready(function(){
 	
-	//ReadJson();
-	
+	//Dont use cache so we get the fresh file after being edited
+  $.ajaxSetup({ cache: false });	
 }
 
 	);
